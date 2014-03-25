@@ -1,1 +1,1 @@
-Project containing utility classes based on mathematics. 
+Project containing maths utility classes based on some algorithms and formulas, with an eye on performance and optimisation. 
