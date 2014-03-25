@@ -1,0 +1,1 @@
+Project containing utility classes based on mathematics. 
