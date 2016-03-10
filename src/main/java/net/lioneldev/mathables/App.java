@@ -16,7 +16,10 @@ public class App
 		Numbers.positiveFactors((Integer.MAX_VALUE)+11); System.gc();
 		Numbers.positiveFactors((Integer.MAX_VALUE)+12); System.gc();
 		*/
-		System.out.println(Numbers.positiveFactors(825874596));
-		System.out.println(Numbers.primeNumbersInRange(7895, 8745966));
+		//System.out.println(Numbers.positiveFactors(825874596));
+		Integer[] v= new Integer[]{4, 7, 9, 12, 11, 25, 17, 20};
+		Range[] ranges = Range.valueOf(2, 23).split(v);
+		for(Range r: ranges)
+			System.out.println(r);
     }
 }
