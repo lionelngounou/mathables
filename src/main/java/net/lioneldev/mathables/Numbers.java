@@ -9,10 +9,10 @@ import java.util.Set;
  */
 public class Numbers {	    
 	
-    public static int getPrimeNum(int arg){
+    public static int getPrimeNumber(int index){
         int seq = 1; 
         int num = 2;
-        x : while(seq<arg){
+        x : while(seq<index){
             if(++num%2==0)
                 continue;
             int loop = num>>1;
@@ -25,14 +25,14 @@ public class Numbers {
         return num;
     }
 	
-    public static long fibonacciNumbers(int seq){
+    public static long fibonacciNumbers(int index){
         //watch out for number overflow error
-        if(seq==1) return 0;
+        if(index==1) return 0;
         long n0 = 0, n1 = 1; 
         int count = 2;
         System.out.print(" " + n0);
         System.out.print(" " + n1);
-        while(count<seq){
+        while(count<index){
             n1 = n0 + n1;
             n0 = n1 - n0;
             count ++;                    
