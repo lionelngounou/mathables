@@ -7,7 +7,41 @@ import java.util.Set;
  * This class contains static utility methods operating on numbers. 
  * @author lionel ngounou
  */
-public class Numbers {
+public class Numbers {	    
+	
+    public static int getPrimeNum(int arg){
+        int seq = 1; 
+        int num = 2;
+        x : while(seq<arg){
+            if(++num%2==0)
+                continue;
+            int loop = num>>1;
+            y : for(int i=3; i<loop; i++)
+                if(num%i==0)
+                    continue x;
+            seq++;
+            System.out.println("loop till: "+loop+ ", seq: "+seq+ ", prime: " + num);
+        }
+        return num;
+    }
+	
+    public static long fibonacciNumbers(int seq){
+        //watch out for number overflow error
+        if(seq==1) return 0;
+        long n0 = 0, n1 = 1; 
+        int count = 2;
+        System.out.print(" " + n0);
+        System.out.print(" " + n1);
+        while(count<seq){
+            n1 = n0 + n1;
+            n0 = n1 - n0;
+            count ++;                    
+            System.out.print(" " + n1);
+        }
+        System.out.println("");
+        return n1;
+    }
+	
 	
 	/*Returns true if the given <code>number</code> has no positive factors other than 1 and itself*/
 	public static boolean isPrime(long number){
